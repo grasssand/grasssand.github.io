@@ -8,26 +8,19 @@
 
 <title>
   
-    Ubuntu使用 Mono +  ASF 挂卡
+    标签: Mono
   
 </title>
 
-<meta name="description" content="Mono是一个开源的.net工具，可以在多平台运行C#程序。ArchiSteamFarm是一个c#写的支持多账号的挂卡软件。其他还有Idel Master(有c#和py，已停止更新)。idle master老登陆不了啊(つд⊂)
-安装Mono官方文档安装使用指导: www.mono-project.com/docs
-添加Mono安装源和签名密钥123$ sudo apt-key adv --key">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Ubuntu使用 Mono +  ASF 挂卡">
-<meta property="og:url" content="http://grasssand.ml/2016/03/20/ubuntu-mono-asf/index.html">
+<meta name="description">
+<meta property="og:type" content="website">
+<meta property="og:title" content="GrassSand">
+<meta property="og:url" content="http://grasssand.ml/tags/Mono/index.html">
 <meta property="og:site_name" content="GrassSand">
-<meta property="og:description" content="Mono是一个开源的.net工具，可以在多平台运行C#程序。ArchiSteamFarm是一个c#写的支持多账号的挂卡软件。其他还有Idel Master(有c#和py，已停止更新)。idle master老登陆不了啊(つд⊂)
-安装Mono官方文档安装使用指导: www.mono-project.com/docs
-添加Mono安装源和签名密钥123$ sudo apt-key adv --key">
-<meta property="og:updated_time" content="2016-03-20T12:16:16.639Z">
+<meta property="og:description">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Ubuntu使用 Mono +  ASF 挂卡">
-<meta name="twitter:description" content="Mono是一个开源的.net工具，可以在多平台运行C#程序。ArchiSteamFarm是一个c#写的支持多账号的挂卡软件。其他还有Idel Master(有c#和py，已停止更新)。idle master老登陆不了啊(つд⊂)
-安装Mono官方文档安装使用指导: www.mono-project.com/docs
-添加Mono安装源和签名密钥123$ sudo apt-key adv --key">
+<meta name="twitter:title" content="GrassSand">
+<meta name="twitter:description">
 
 
   <link rel="alternative" href="/atom.xml" title="GrassSand" type="application/atom+xml">
@@ -138,30 +131,40 @@
       
         <div style="max-width: 1000px">
       
-          <article id="post-ubuntu-mono-asf" class="article article-type-post">
+          <h1>Mono</h1>
+
+
   
-    <h1 class="article-header">
-      Ubuntu使用 Mono +  ASF 挂卡
-    </h1>
   
+    <div class="post-list">
   
 
-  <div class="article-info">
-    <span class="article-date">
+    <div class="post-list-item article">
+      <h3 class="article-header">
+        <a href="/2016/03/20/ubuntu-mono-asf/" >
+  Ubuntu使用 Mono +  ASF 挂卡
+</a>
+
+      </h3>
+      
+
+      <div class="article-info">
+        <a href="/2016/03/20/ubuntu-mono-asf/"><span class="article-date">
   2016-03-20
 </span>
+</a>
+        
 
-    
-
-    
+        
 	<span class="article-tag tagcloud">
 		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Mono/">Mono</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ubuntu/">Ubuntu</a></li></ul>
 	</span>
 
 
-  </div>
-  <div class="article-entry">
-    <p><a href="http://www.mono-project.com/" target="_blank" rel="external">Mono</a>是一个开源的.net工具，可以在多平台运行C#程序。<br><a href="https://github.com/JustArchi/ArchiSteamFarm/" target="_blank" rel="external">ArchiSteamFarm</a>是一个c#写的支持多账号的挂卡软件。其他还有<a href="https://github.com/jshackles/idle_master" target="_blank" rel="external">Idel Master</a>(有c#和py，已停止更新)。<font color="white">idle master老登陆不了啊(つд⊂)</font></p>
+      </div>
+      <div class="article-entry">
+        
+          <p><a href="http://www.mono-project.com/" target="_blank" rel="external">Mono</a>是一个开源的.net工具，可以在多平台运行C#程序。<br><a href="https://github.com/JustArchi/ArchiSteamFarm/" target="_blank" rel="external">ArchiSteamFarm</a>是一个c#写的支持多账号的挂卡软件。其他还有<a href="https://github.com/jshackles/idle_master" target="_blank" rel="external">Idel Master</a>(有c#和py，已停止更新)。<font color="white">idle master老登陆不了啊(つд⊂)</font></p>
 <h2 id="安装Mono"><a href="#安装Mono" class="headerlink" title="安装Mono"></a>安装Mono</h2><p>官方文档安装使用指导: <a href="http://www.mono-project.com/docs/" target="_blank" rel="external">www.mono-project.com/docs</a></p>
 <h3 id="添加Mono安装源和签名密钥"><a href="#添加Mono安装源和签名密钥" class="headerlink" title="添加Mono安装源和签名密钥"></a>添加Mono安装源和签名密钥</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF</span><br><span class="line">$ <span class="built_in">echo</span> <span class="string">"deb http://download.mono-project.com/repo/debian wheezy main"</span> | sudo tee /etc/apt/sources.list.d/mono-xamarin.list</span><br><span class="line">$ sudo apt-get update</span><br></pre></td></tr></table></figure>
 <h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>官网提供了4个包:<br><code>mono-devel</code>: 编译源码<br><code>mono-complete</code>: 解决大多数 “assembly not found” 错误<br><code>referenceassemblies-pcl</code>: 提供PCL编译支持<br><code>ca-certificates-mono</code>: HTTPS连接时的SSL证书，当遇到HTTPS连接错误时需要安装</p>
@@ -184,29 +187,13 @@
 <p>结束当前会话输入<code>exit</code>或<code>kill [进程号]</code></p>
 <font color="white">还是第一次写这么长|∀` )</font>
 
-  </div>
-  <footer class="article-footer">
-    
-  <div class="cc">
-    <a href="http://creativecommons.org/licenses/by-sa/4.0/deed.z" target="_blank" title="署名-相同方式共享">
-      <img src="/images/cc/cc.png">
-      
-          <img src="/images/cc/by.png">
         
-          <img src="/images/cc/sa.png">
-      
-      <span>
-        本作品采用知识共享 署名-相同方式共享 4.0 国际许可协议进行许可。
-      </span>
-    </a>
-  </div>
+      </div>
+    </div>
 
-
-    
-
-  </footer>
-</article>
-
+  
+    </div>
+  
 
 
 
