@@ -8,14 +8,14 @@
 
 <title>
   
-    归档: 2016
+    标签: Python
   
 </title>
 
 <meta name="description">
 <meta property="og:type" content="website">
 <meta property="og:title" content="GrassSand">
-<meta property="og:url" content="http://grasssand.ml/archives/2016/index.html">
+<meta property="og:url" content="http://grasssand.ml/tags/Python/index.html">
 <meta property="og:site_name" content="GrassSand">
 <meta property="og:description">
 <meta name="twitter:card" content="summary">
@@ -131,19 +131,12 @@
       
         <div style="max-width: 1000px">
       
-          
+          <h1>Python</h1>
+
 
   
   
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <h1><a href="/archives/2016" class="archive-year">2016</a></h1>
-        </div>
-        <div class="post-list">
-    
+    <div class="post-list">
   
 
     <div class="post-list-item article">
@@ -178,64 +171,7 @@
     </div>
 
   
-
-  
-  
-    
-  
-
-    <div class="post-list-item article">
-      <h3 class="article-header">
-        <a href="/2016/03/20/ubuntu-mono-asf/" >
-  Ubuntu使用 Mono +  ASF 挂卡
-</a>
-
-      </h3>
-      
-
-      <div class="article-info">
-        <a href="/2016/03/20/ubuntu-mono-asf/"><span class="article-date">
-  2016-03-20
-</span>
-</a>
-        
-
-        
-	<span class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ubuntu/">Ubuntu</a></li></ul>
-	</span>
-
-
-      </div>
-      <div class="article-entry">
-        
-          <p><a href="http://www.mono-project.com/" target="_blank" rel="external">Mono</a>是一个开源的.net工具，可以在多平台运行C#程序。<br><a href="https://github.com/JustArchi/ArchiSteamFarm/" target="_blank" rel="external">ArchiSteamFarm</a>是一个c#写的支持多账号的挂卡软件。其他还有<a href="https://github.com/jshackles/idle_master" target="_blank" rel="external">Idel Master</a>(有c#和py，已停止更新)。<font color="white">idle master老登陆不了啊(つд⊂)</font></p>
-<h2 id="安装Mono"><a href="#安装Mono" class="headerlink" title="安装Mono"></a>安装Mono</h2><p>官方文档安装使用指导: <a href="http://www.mono-project.com/docs/" target="_blank" rel="external">www.mono-project.com/docs</a></p>
-<h3 id="添加Mono安装源和签名密钥"><a href="#添加Mono安装源和签名密钥" class="headerlink" title="添加Mono安装源和签名密钥"></a>添加Mono安装源和签名密钥</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF</span><br><span class="line">$ <span class="built_in">echo</span> <span class="string">"deb http://download.mono-project.com/repo/debian wheezy main"</span> | sudo tee /etc/apt/sources.list.d/mono-xamarin.list</span><br><span class="line">$ sudo apt-get update</span><br></pre></td></tr></table></figure>
-<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>官网提供了4个包:<br><code>mono-devel</code>: 编译源码<br><code>mono-complete</code>: 解决大多数 “assembly not found” 错误<br><code>referenceassemblies-pcl</code>: 提供PCL编译支持<br><code>ca-certificates-mono</code>: HTTPS连接时的SSL证书，当遇到HTTPS连接错误时需要安装</p>
-<p>下载安装(下载过程比较久，请耐心等待)</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install mono-devel mono-complete referenceassemblies-pcl ca-certificates-mono</span><br></pre></td></tr></table></figure>
-<h3 id="安装完成"><a href="#安装完成" class="headerlink" title="安装完成"></a>安装完成</h3><p>赶紧测试一下<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ mono -v</span><br></pre></td></tr></table></figure></p>
-<h2 id="ASF"><a href="#ASF" class="headerlink" title="ASF"></a>ASF</h2><h3 id="配置ASF"><a href="#配置ASF" class="headerlink" title="配置ASF"></a>配置ASF</h3><p><a href="https://github.com/JustArchi/ArchiSteamFarm/releases/" target="_blank" rel="external">这里</a>下载最新版<code>zip</code>包。解压，修改<code>config</code>文件夹里的配置文件。<br><code>ASF.json</code>是全局配置。<code>example.json</code>和<code>minimal.json</code>是用户配置文件(一般配置/最小配置)。<br><br>复制<code>example.json</code>文件并重命名如<code>aa.json</code>, 修改如下几行</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"Enabled"</span>: <span class="literal">true</span>,  //启用配置</span><br><span class="line"><span class="string">"SteamLogin"</span>: <span class="string">"username"</span>,  //steam登陆用户名</span><br><span class="line"><span class="string">"SteamPassword"</span>: <span class="string">"password"</span>,  //登陆密码，值为null时即每次启动ASF需手动输密码</span><br></pre></td></tr></table></figure>
-<p>更多详细配置请参考<a href="https://github.com/JustArchi/ArchiSteamFarm/wiki/" target="_blank" rel="external">官方文档</a></p>
-<h3 id="启动ASF"><a href="#启动ASF" class="headerlink" title="启动ASF"></a>启动ASF</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ mono ASF.exe</span><br></pre></td></tr></table></figure>
-<p>ssh连接主机时，结束ssh就会立即结束掉当前终端的进程。因此，还需要安装<code>GUN Screen</code>。<br><code>GUN Screen</code>是一个可以在多个进程之间多路复用一个物理终端的全屏窗口管理器。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install screen</span><br></pre></td></tr></table></figure>
-<p>运行命令<code>screen -S [screen]</code>新建一个screen,再在screen里运行ASF，如</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ screen -S ASF</span><br></pre></td></tr></table></figure>
-<p>快捷键<code>ctrl + a</code>和<br><code>d</code> 从当前 screen 会话分离，并保持其后台运行<br><code>?</code> 列出快捷键和帮助<br><code>c</code> 创建另一个screen<br>更多快捷键使用请查看<a href="https://wiki.gentoo.org/wiki/Screen/" target="_blank" rel="external">wiki</a></p>
-<p>当从会话分离后，<code>screen -ls</code>列出所有会话 </p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ screen -ls</span><br><span class="line">There is a screen on:</span><br><span class="line">       	1750.ASF	 (Detached)</span><br><span class="line">1 Socket <span class="keyword">in</span> /var/run/screen/S-xxx</span><br></pre></td></tr></table></figure>
-<p>恢复会话使用<code>screen -r [screen]</code></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ screen -r ASF</span><br></pre></td></tr></table></figure>
-<p>结束当前会话输入<code>exit</code>或<code>kill [进程号]</code></p>
-<font color="white">还是第一次写这么长|∀` )</font>
-
-        
-      </div>
     </div>
-
   
 
 
